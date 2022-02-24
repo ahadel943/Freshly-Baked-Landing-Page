@@ -1,0 +1,269 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    scroll-behavior: smooth;
+    font-size: 10px;
+    --white-clr: #fff;
+    --gold-clr: #987e55;
+    --dark-grey: #525252;
+    --light-grey: #bbbbbb;
+}
+
+a {text-decoration: none;}
+
+button {border: none; outline: none;}
+
+ul {list-style: none;}
+
+img {max-width: 100%;}
+
+.btn {
+    color: var(--white-clr);
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid var(--white-clr);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {background-color: var(--white-clr); color: var(--gold-clr);}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../imgs/images/img1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 1rem;
+    overflow: hidden;
+}
+
+header .nav-bar {width: 100%; height: 100px; position: relative;}
+
+.logo {
+    width: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.menu {
+    width: 4rem;
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.nav-menu {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--gold-clr);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: 0.3s ease-in-out;
+}
+
+.nav-menu .nav-menu-links a {
+    color: var(--white-clr);
+    font-weight: 700;
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    transition: .3s ease-in-out;
+}
+
+.nav-menu .nav-menu-links a:hover {transform: scale(1.1);}
+
+.nav-menu .close {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+}
+
+.hero-text {
+    width: 100%;
+    padding: 0 2rem;
+    color: var(--white-clr);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+
+.hero-text h1 {font-size: 3rem; width: 100%; margin-bottom: 4rem;}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.row .left {position: relative;}
+
+.row .left .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.right {width: 100%; height: 100%; padding: 3rem;}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--dark-grey);
+    margin-bottom: 2rem;
+}
+
+.text-content p {
+    font-size: 1.4rem;
+    color: var(--light-grey);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.gold {color: var(--gold-clr); border: 1px solid var(--gold-clr);}
+
+.btn.gold:hover {background-color: var(--gold-clr); color: var(--white-clr);}
+
+.features {
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(../imgs/images/img4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 5rem;
+    color: var(--white-clr);
+}
+
+.features .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.features .card h2{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    width: 40%;
+    margin: 1rem 0;
+}
+
+.features .card p {width: 40%;}
+
+.features .icon {width: 3rem;}
+
+footer {
+    width: 100%;
+    background-color: var(--gold-clr);
+    padding: 5rem 3rem 0 3rem;
+    position: relative;
+}
+
+.go-top {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--gold-clr);
+    display: grid;
+    place-items: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.go-top a {color: var(--white-clr);}
+
+footer .social {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    opacity: 0.3;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--white-clr);
+    margin-bottom: 3rem;
+}
+
+footer .icon {width: 4rem; cursor: pointer;}
+
+footer .footer-nav {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.links {margin-bottom: 3rem; text-align: center;}
+
+.links li {font-size: 1.4rem; margin-bottom: 1rem;}
+
+.links li.head {
+    color: var(--dark-grey);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.links li a {color: var(--white-clr);}
+
+@media screen and (min-width: 600px) {
+    .hero-text {width: 50%;}
+    .right, .left {width: 50%;}
+    .row {flex-direction: row;}
+    .row.rev {flex-direction: row-reverse;}
+    .features {grid-template-columns: repeat(4, 1fr);}
+    footer .footer-nav {width: 50%; flex-direction: row; align-items: flex-start; justify-content: space-evenly;}
+}
